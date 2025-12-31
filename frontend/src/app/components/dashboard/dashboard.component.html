@@ -44,10 +44,11 @@
                     [routerLink]="['/projects', projet.id]">
                     <div class="project-info">
                         <span class="project-name">{{ projet.nom }}</span>
-                        <span class="project-date">{{ projet.dateDebut | date:'dd/MM/yyyy' }} - {{ projet.dateLivraison | date:'dd/MM/yyyy' }}</span>
+                        <span class="project-date">{{ projet.dateDebut | date:'dd/MM/yyyy' }} - {{ projet.dateLivraison
+                            | date:'dd/MM/yyyy' }}</span>
                     </div>
                     <div class="project-action">
-                        <span class="arrow">?</span>
+                        <span class="arrow">→</span>
                     </div>
                 </div>
                 <div *ngIf="stats.projets?.length === 0" class="empty-state">
@@ -85,4 +86,3 @@
         </div>
     </div>
 </div>
-

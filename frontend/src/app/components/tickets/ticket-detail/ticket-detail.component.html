@@ -1,6 +1,6 @@
 ﻿<div class="container" *ngIf="ticket">
     <div class="header-actions" data-aos="fade-right">
-        <a routerLink="/tickets" class="btn-back">? Retour à la liste</a>
+        <a routerLink="/tickets" class="btn-back">← Retour à la liste</a>
         <div class="status-group">
             <span class="badge status" [ngClass]="ticket.statut.toLowerCase()">{{ ticket.statut }}</span>
             <span class="badge priority" [ngClass]="ticket.priorite.toLowerCase()">{{ ticket.priorite }}</span>
@@ -80,7 +80,7 @@
                 </div>
             </div>
             <div class="glass-card mt-4" data-aos="fade-up" data-aos-delay="200" *ngIf="attachments.length > 0">
-                <h3>?? Pièces jointes</h3>
+                <h3>📎 Pièces jointes</h3>
                 <div class="attachments-list">
                     <div class="attachment-item" *ngFor="let attachment of attachments">
                         <div class="attachment-info">
@@ -91,7 +91,7 @@
                             </div>
                         </div>
                         <button (click)="downloadAttachment(attachment)" class="btn-download">
-                            ? Télécharger
+                            ⬇ Télécharger
                         </button>
                     </div>
                 </div>

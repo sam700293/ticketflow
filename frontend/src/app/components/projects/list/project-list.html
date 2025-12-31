@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <a [routerLink]="['/projects', project.id]" class="btn-details">
-                    Détails ?
+                    Détails →
                 </a>
             </div>
         </div>
@@ -35,8 +35,7 @@
         <p>Chargement de vos projets...</p>
     </div>
     <div *ngIf="!loading && projects.length === 0" class="empty-state">
-        <div class="empty-icon">??</div>
+        <div class="empty-icon">📁</div>
         <p>Vous n'avez aucun projet pour le moment.</p>
     </div>
 </div>
-

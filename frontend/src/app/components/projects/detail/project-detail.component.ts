@@ -67,5 +67,31 @@ export class ProjectDetailComponent implements OnInit {
             ferme: (this.tickets as any[]).filter((t: any) => t.statut === 'FERME').length
         };
     }
+
+    formatStatus(statut: string): string {
+        const statusMap: { [key: string]: string } = {
+            'EN_COURS': 'En cours',
+            'OUVERT': 'Ouvert',
+            'RESOLU': 'Résolu',
+            'FERME': 'Fermé',
+            'ACTIF': 'Actif',
+            'TERMINE': 'Terminé',
+            'SUSPENDU': 'Suspendu'
+        };
+        return statusMap[statut] || statut;
+    }
+
+    getStatusClass(statut: string): string {
+        const classMap: { [key: string]: string } = {
+            'EN_COURS': 'en-cours',
+            'OUVERT': 'ouvert',
+            'RESOLU': 'resolu',
+            'FERME': 'ferme',
+            'ACTIF': 'actif',
+            'TERMINE': 'termine',
+            'SUSPENDU': 'suspendu'
+        };
+        return classMap[statut] || statut.toLowerCase();
+    }
 }
 

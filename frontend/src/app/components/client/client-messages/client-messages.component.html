@@ -25,7 +25,7 @@
     </div>
     <div *ngIf="selectedMessage" class="modal-overlay" (click)="fermerMessage()">
         <div class="modal-content" (click)="$event.stopPropagation()">
-            <button class="close-btn" (click)="fermerMessage()">?</button>
+            <button class="close-btn" (click)="fermerMessage()">←</button>
             <div class="modal-header">
                 <h3>{{ selectedMessage.objet }}</h3>
             </div>
