@@ -57,7 +57,7 @@
                 <div class="alert-danger" *ngIf="password.dirty || f.submitted">
                     <div *ngIf="password.errors?.['required'] && f.submitted">Requis</div>
                     <div *ngIf="password.errors?.['minlength'] || password.errors?.['maxlength']">
-                        Le mot de passe doit contenir entre 6 et 12 caractï¿½res
+                        Le mot de passe doit contenir entre 6 et 12 caractères
                     </div>
                 </div>
             </div>
@@ -71,13 +71,13 @@
                 <input type="text" class="form-control" name="telephone" [(ngModel)]="form.telephone"
                     #telephone="ngModel" placeholder="06 00 00 00 00" />
             </div>
-            <button class="btn btn-primary">Crï¿½er le Client</button>
+            <button class="btn btn-primary">Créer le Client</button>
             <div class="alert alert-danger-box" *ngIf="f.submitted && isSignUpFailed">
-                ï¿½chec de la crï¿½ation: {{ errorMessage }}
+                Échec de la création: {{ errorMessage }}
             </div>
         </form>
         <div class="alert alert-success-box" *ngIf="isSuccessful">
-            <h3>Client crï¿½ï¿½ avec succï¿½s !</h3>
+            <h3>Client créé avec succès !</h3>
             <p>Redirection vers la liste...</p>
         </div>
     </div>
