@@ -36,7 +36,13 @@
     </div>
     <div *ngIf="selectedMessage" class="modal-overlay" (click)="fermerMessage()">
         <div class="modal-content" (click)="$event.stopPropagation()">
-            <button class="close-btn" (click)="fermerMessage()">?</button>
+            <button class="close-btn" (click)="fermerMessage()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+            </button>
             <div class="modal-header">
                 <h3>{{ selectedMessage.objet }}</h3>
             </div>
@@ -80,7 +86,8 @@
                         rows="4" maxlength="1000"></textarea>
                     <small class="char-count">{{ replyText.length }}/1000</small>
                     <div class="reply-actions">
-                        <button class="btn-reply" (click)="envoyerReponse()" [disabled]="!replyText.trim() || isReplying">
+                        <button class="btn-reply" (click)="envoyerReponse()"
+                            [disabled]="!replyText.trim() || isReplying">
                             {{ isReplying ? 'Envoi...' : 'Envoyer la réponse' }}
                         </button>
                     </div>
@@ -89,4 +96,3 @@
         </div>
     </div>
 </div>
-
