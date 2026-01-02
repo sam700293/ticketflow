@@ -52,7 +52,7 @@
                 <div class="selected-files" *ngIf="selectedFiles.length > 0">
                     <div class="file-item" *ngFor="let file of selectedFiles; let i = index">
                         <span class="file-name">{{ file.name }} ({{ (file.size / 1024).toFixed(2) }} KB)</span>
-                        <button type="button" class="btn-remove" (click)="removeFile(i)">?</button>
+                        <button type="button" class="btn-remove" (click)="removeFile(i)">X</button>
                     </div>
                 </div>
             </div>
@@ -68,4 +68,3 @@
         </ng-template>
     </div>
 </div>
-
